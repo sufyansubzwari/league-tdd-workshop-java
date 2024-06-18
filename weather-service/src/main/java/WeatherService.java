@@ -19,8 +19,6 @@ public class WeatherService {
         long timestamp;
 
         CacheEntry(WeatherData data, long timestamp) {
-            this.data = data;
-            this.timestamp = timestamp;
         }
     }
 
@@ -28,16 +26,11 @@ public class WeatherService {
         long currentTime = System.currentTimeMillis();
 
         // Check cache first
-        if (cache.containsKey(city)) {
-            CacheEntry entry = cache.get(city);
-            if (currentTime - entry.timestamp < CACHE_DURATION) {
-                return entry.data;
-            }
         }
 
         // Fetch new data
         try {
-            URL url = new URL(API_URL + "?q=" + city + "&appid=" + API_KEY + "&units=metric");
+            URL url = new URL(API_URL + "?q=" + city + "&appid=" + API_KEY + "&units=imperial");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.connect();
