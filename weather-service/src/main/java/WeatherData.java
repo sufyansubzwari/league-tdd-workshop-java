@@ -5,29 +5,20 @@ public class WeatherData {
     private Double temperature;
     private Double humidity;
 
-    public WeatherData(Double temperature, Double humidity) {
-        this.temperature = temperature;
-        this.humidity = humidity;
-    }
+    // public WeatherData(Double temperature, Double humidity) {
+    // }
 
-    public Double getTemperature() {
-        return temperature;
-    }
+    // public Double getTemperature() {
+    // }
 
-    public Double getHumidity() {
-        return humidity;
-    }
+    // public Double getHumidity() {
+    // }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        WeatherData that = (WeatherData) o;
-        return Objects.equals(temperature, that.temperature) && Objects.equals(humidity, that.humidity);
-    }
+    // @Override
+    // public boolean equals(Object o) {
+    // }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(temperature, humidity);
-    }
+    // @Override
+    // public int hashCode() {
+    // }
 }
