@@ -9,7 +9,7 @@ import java.util.Map;
 import org.json.JSONObject;
 
 public class WeatherService {
-    private static final String API_KEY = "YOUR_API_KEY";
+    private static final String API_KEY = "4523628bd365a0c61f43c9ba0c9cd1ff";
     private static final String API_URL = "http://api.openweathermap.org/data/2.5/weather";
     private Map<String, CacheEntry> cache = new HashMap<>();
     private static final long CACHE_DURATION = 600_000;  // cache duration in milliseconds (10 minutes)
